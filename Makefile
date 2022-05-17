@@ -68,7 +68,7 @@ build-arm64:
 
 GORELEASER_BIN = $(shell pwd)/bin/goreleaser
 install-goreleaser: ## check license if not exist install go-lint tools
-	$(call go-get-tool,$(GORELEASER_BIN),github.com/goreleaser/goreleaser@v1.6.3)
+	$(call go-get-tool,$(GORELEASER_BIN),github.com/goreleaser/goreleaser@v1.7.0)
 
 build-pack: SHELL:=/bin/bash
 build-pack: install-goreleaser clean ## build binaries by default
