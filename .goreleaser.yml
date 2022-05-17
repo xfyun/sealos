@@ -81,7 +81,7 @@ builds:
 #      amd64: x86_64
 #      arm64: aarch64
 checksum:
-  name_template: '{{ .ProjectName }}_{{ .Arch }}_checksums.txt'
+  name_template: '{{ .ProjectName }}_{{ .Binary }}_checksums.txt'
 snapshot:
   name_template: "{{ .Tag }}-next"
 changelog:
