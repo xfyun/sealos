@@ -14,7 +14,7 @@
 
 FROM --platform=$BUILDPLATFORM golang:1.17-buster as builder
 ENV GOPROXY=https://goproxy.cn
-ENV GITHUB_TOKEN=$GITHUB_TOKEN
+ENV GITHUB_TOKEN=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
 ARG TARGETARCH
 ARG ACTION=build-pack
 
