@@ -48,6 +48,7 @@ jobs:
           load: true
           tags: sealos:latest
           build-args: ACTION=build-release
+          secrets: GIT_AUTH_TOKEN=${{ secrets.GIT_AUTH_TOKEN }}
       # https://github.com/docker/build-push-action
 
       - name: Build binareies to oss
