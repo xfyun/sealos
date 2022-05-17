@@ -89,13 +89,13 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: sealos-amd64
-          path: dist/sealos-amd64_linux_amd64/sealos
+          path: dist/sealos-amd64_linux_amd64/sealos-amd64
 
       - name: Save build sealos binaries linux-arm64
         uses: actions/upload-artifact@v2
         with:
           name: sealos-arm64
-          path: dist/sealos-arm64_linux_arm64/sealos
+          path: dist/sealos-arm64_linux_arm64/sealos-arm64
 
       - name: Save build binaries linux-amd64 sealctl
         uses: actions/upload-artifact@v2
