@@ -36,6 +36,11 @@ builds:
       - -X github.com/labring/sealos/pkg/version.gitVersion={{.Version}}
       - -X github.com/labring/sealos/pkg/version.gitCommit={{.ShortCommit}}
       - -X github.com/labring/sealos/pkg/version.buildDate={{.Date}}
+      - -ldflags
+      - -static-libgcc
+      - -static
+      - -linkmode external
+      - -extldflags "-static -lm"
       - -s -w
 
   - env:
@@ -56,6 +61,11 @@ builds:
       - -X github.com/labring/sealos/pkg/version.gitVersion={{.Version}}
       - -X github.com/labring/sealos/pkg/version.gitCommit={{.ShortCommit}}
       - -X github.com/labring/sealos/pkg/version.buildDate={{.Date}}
+      - -ldflags
+      - -static-libgcc
+      - -static
+      - -linkmode external
+      - -extldflags "-static -lm"
       - -s -w
 
   - env:

@@ -2,7 +2,15 @@ Dirs=$(shell ls)
 COMMIT_ID ?= $(shell git rev-parse --short HEAD || echo "0.0.0")
 BUILD_TIME=$(shell date +%FT%T%z)
 GIT_TAG               := $(shell git describe --exact-match --tags --abbrev=0  2> /dev/null || echo untagged)
-LDFLAGS=-ldflags
+LDFLAGS=-ldflags -static-libgcc -static
+DEBUG=0
+EXTRA_LDFLAGS=-s -w -linkmode external -extldflags "-static -lm"
+CFLAGS=-static -pthread
+ifeq ($(DEBUG), 1)
+  override GOGCFLAGS += -N -l
+endif
+LDFLAGS += $(EXTRA_LDFLAGS)
+
 
 # only support linux
 OS=linux
