@@ -36,7 +36,7 @@ builds:
       - -X github.com/labring/sealos/pkg/version.gitVersion={{.Version}}
       - -X github.com/labring/sealos/pkg/version.gitCommit={{.ShortCommit}}
       - -X github.com/labring/sealos/pkg/version.buildDate={{.Date}}
-      - -extldflags "-static -lm"
+      - -extldflags "-static -fpic"
       - -s -w
       - -linkmode external
 
@@ -59,7 +59,7 @@ builds:
       - -X github.com/labring/sealos/pkg/version.gitVersion={{.Version}}
       - -X github.com/labring/sealos/pkg/version.gitCommit={{.ShortCommit}}
       - -X github.com/labring/sealos/pkg/version.buildDate={{.Date}}
-      - -extldflags "-static -lm"
+      - -extldflags "-static -fpic"
       - -s -w
       - -linkmode external
 
